@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Nolhan BLANCHETIÈRE--DRÔLON | Carte de visite numérique</title>
+	<!-- CSS -->
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<!-- JS  -->
+	<script src="./assets/js/app.js" defer></script>
+</head>
+<body id="page" data-color-scheme="light">
+	<div class="container">
+		<!-- topbar : toggle thème -->
+		<header class="topbar">
+			<div class="topbar-inner">
+				<div class="brand" id="brand"></div>
+				<div class="controls">
+					<button id="themeToggle" class="icon-btn" aria-pressed="false" aria-label="Basculer thème">
+						<svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+							<path d="M6.76 4.84 5 3.07 3.22 4.85l1.76 1.76L6.76 4.84zM1 13h3v-2H1v2zm10-9h2V1h-2v3zm7.03 2.05 1.79-1.79 1.78 1.79-1.79 1.79L18.03 6.05zM17 13h3v-2h-3v2zM12 8a4 4 0 100 8 4 4 0 000-8zm4.24 9.16 1.8 1.79 1.79-1.79-1.79-1.79-1.8 1.79zM12 23h2v-3h-2v3zM4.24 19.16 6.04 17.4 4.24 15.62 2.45 17.4 4.24 19.16z" />
+						</svg>
+						<svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="display:none">
+							<path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+						</svg>
+					</button>
+				</div>
+			</div>
+		</header>
+
+		<!-- carte principale -->
+		<main class="card" role="main">
+			<!-- en-tête : avatar + infos -->
+			<section class="card__header">
+				<div class="avatar-wrap">
+					<img id="avatar" class="avatar" alt="photo de profil">
+				</div>
+				<div class="personal">
+					<h1 class="fullname" id="fullname"></h1>
+					<p class="role" id="role"></p>
+					<p class="school" id="school"></p>
+				</div>
+			</section>
+
+			<!-- contenu principal responsive en 2 colonnes (desktop) -->
+			<section class="card__body">
+				<!-- colonne gauche : contact & social -->
+				<div class="col col--left">
+					<!-- contact -->
+					<div class="block contact-block" aria-label="Contact">
+						<h2 class="block-title">Contact</h2>
+						<a class="contact-item" id="phoneLinkValue">
+							<svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+								<path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C10.07 21 3 13.93 3 5c0-.55.45-1 1-1H7.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+							</svg>
+							<div class="contact-meta">
+								<span class="label">Téléphone</span>
+								<span class="value" id="phoneValue"></span>
+							</div>
+						</a>
+						<a class="contact-item" id="emailLinkValue">
+							<svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+								<path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 4v10h16V8l-8 5-8-5z" />
+							</svg>
+							<div class="contact-meta">
+								<span class="label">Email</span>
+								<span class="value" id="emailValue"></span>
+							</div>
+						</a>
+						<div class="contact-item" role="text" aria-label="Localisation">
+							<svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+								<path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" />
+							</svg>
+							<div class="contact-meta">
+								<span class="label">Localisation</span>
+								<span class="value" id="locationValue"></span>
+							</div>
+						</div>
+					</div>
+
+					<!-- social -->
+					<div class="block social-block" aria-label="Liens sociaux">
+						<h2 class="block-title">Réseaux</h2>						
+						<div class="social-list">
+							<a class="social-link" id="linkedinLink" target="_blank" rel="noopener noreferrer">
+								<svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+									<path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8.98h5V24H0V8.98zM8.5 8.98h4.78v2.05h.07c.67-1.27 2.3-2.6 4.73-2.6C23.8 8.43 24 11.24 24 14.93V24h-5v-8.73c0-2.08-.04-4.75-2.9-4.75-2.9 0-3.35 2.27-3.35 4.6V24H8.5V8.98z" />
+								</svg>
+								<span>LinkedIn</span>
+							</a>
+							<a class="social-link" id="githubLink" target="_blank" rel="noopener noreferrer">
+								<svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+									<path d="M12 .5A12 12 0 000 12.65c0 5.3 3.44 9.79 8.2 11.37.6.12.82-.26.82-.58v-2.02c-3.34.74-4.04-1.44-4.04-1.44-.55-1.4-1.35-1.77-1.35-1.77-1.1-.76.08-.75.08-.75 1.22.09 1.86 1.27 1.86 1.27 1.08 1.84 2.83 1.31 3.52 1 .11-.78.42-1.31.76-1.61-2.66-.31-5.46-1.34-5.46-5.95 0-1.31.47-2.38 1.24-3.22-.13-.31-.54-1.57.12-3.28 0 0 1.01-.32 3.3 1.23a11.4 11.4 0 016 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.71.25 2.97.12 3.28.77.84 1.24 1.91 1.24 3.22 0 4.62-2.8 5.63-5.47 5.92.43.38.81 1.12.81 2.26v3.35c0 .32.22.71.82.59A12 12 0 0012 .5z" />
+								</svg>
+								<span>GitHub</span>
+							</a>
+							<a class="social-link" id="websiteLink" target="_blank" rel="noopener noreferrer">
+								<svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+									<path d="M12 2a10 10 0 100 20 10 10 0 000-20zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z" />
+								</svg>
+								<span>Site Web</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- colonne droite : QR + wallet + CV -->
+				<div class="col col--right">
+					<div class="block qr-block" aria-label="QR codes">
+						<h2 class="block-title">Partager &amp; Ajouter</h2>
+						<div class="qr-grid">
+							<div class="qr-card">
+								<div class="qr-card-title">Partager le site</div>
+								<img alt="QR Code du site" id="qrCodeSite" class="qr-canvas" aria-hidden="false">
+							</div>
+							<div class="qr-card">
+								<div class="qr-card-title">Ajouter le contact</div>
+								<img alt="QR Code du contact" id="qrCodeContact" class="qr-canvas" aria-hidden="false">
+							</div>
+						</div>
+					</div>
+
+					<div class="block wallet-block" aria-label="Contact">
+						<h2 class="block-title">Ajouter à vos contact</h2>
+						<div class="wallet-list">
+							<button class="wallet-btn" type="button" onclick="addToContact()" title="Ajouter à Google Wallet">								
+								<svg class="wallet-icon" viewBox="0 0 24 24" aria-hidden="true">
+									<path d="M15.2 18.7c-3.96-1.48-7.09-4.61-8.57-8.57-.22-.6-.08-1.27.36-1.71l1.72-1.72c.39-.39.39-1.02 0-1.41L6.46 3.2c-.39-.39-1.02-.39-1.41 0L3.8 4.45c-.8.8-1.17 1.94-.97 3.06.93 5.24 5.02 9.33 10.26 10.26 1.12.2 2.26-.17 3.06-.97l1.25-1.25c.39-.39.39-1.02 0-1.41l-2.09-2.09c-.39-.39-1.02-.39-1.41 0l-1.72 1.72c-.44.44-1.11.58-1.71.36z" />
+								</svg>
+								<span>Télécharger le contact</span>
+							</button>
+						</div>
+					</div>
+
+					<!-- CV bouton mobile / right column -->
+					<div class="block cv-block" aria-label="Télécharger le CV">
+						<button class="btn btn--primary cv-btn" type="button" onclick="downloadCV()"
+							title="Télécharger CV">
+							<svg viewBox="0 0 24 24" class="icon">
+								<path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.67v6h6V9h3.67L12 2z" />
+							</svg>
+							<span>Télécharger le CV</span>
+						</button>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- topbar : toggle thème -->
+		<footer>
+			<div class="footer-inner">
+				<div class="copyright" id="copyright"><a href="https://github.com/Nolhan-Norma-Dev/digital-card" target="_blank">MIT Lisense - 2025 &lt;/Norma Dev&gt; by Nolhan B.D.</a></div>
+				<div class="version" id="version">Version site : 1.0.3</div>
+			</div>
+		</footer>
+
+		<!-- modal (conserve ids/classes attendus) -->
+		<div id="cvModal" class="modal" aria-hidden="true">
+			<div class="modal-backdrop" tabindex="-1"></div>
+			<div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="cvModalTitle">
+				<button class="modal-close" onclick="closeCVModal()" aria-label="Fermer">&times;</button>
+				<h3 id="cvModalTitle">Choisissez la version du CV</h3>
+				<div id="cvOptions" class="cv-options"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

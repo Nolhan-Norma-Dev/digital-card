@@ -1,0 +1,50 @@
+{
+    "site": {
+        "title": "John Doe | Digital Business Card",
+        "brand": "John D. — Digital Card"
+    },
+
+    "personal": {
+        "fullName": "John Doe",
+        "nameInitial": "John D.",
+        "role": "Software Developer",
+        "school": "IUT de Vannes",
+        "street": "42 rue de la technologie",
+        "city": "Vannes",
+        "department": "Tech District",
+        "postal_code": "56000",
+        "country": "France",
+        "photo": "./assets/img/avatar.jpg"
+    },
+
+    "contact": {
+        "phone": "+33 07 65 43 32 10",
+        "email": "john.doe@example.com"
+    },
+
+    "social": {
+        "linkedin": "https://www.linkedin.com/in/nolhan-blanchetiere-drolon/",
+        "github": "https://github.com/Nolhan-Norma-Dev",
+        "website": "https://nolhan-bd.fr"
+    },
+
+    "qrCodes": {
+        "site": "./assets/img/qr_codes/site_qr.png",
+        "contact": "./assets/img/qr_codes/contact_qr.png"
+    },
+
+    "cvVersions": [
+        {
+            "id": "cv-francais",
+            "label": "CV Français",
+            "fileName": "cv_john_doe_fr.pdf",
+            "url": "./assets/docs/cv_john_doe_fr.pdf"
+        },
+        {
+            "id": "cv-anglais",
+            "label": "CV Anglais",
+            "fileName": "cv_john_doe_en.pdf",
+            "url": "./assets/docs/cv_john_doe_en.pdf"
+        }
+    ]
+}
